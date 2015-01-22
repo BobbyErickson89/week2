@@ -1,0 +1,91 @@
+/* Reasonable defaults */
+body {
+    font-family: sans-serif;
+    line-height: 1.4em;
+    background: #F5F5F5;
+    color: #444;
+    padding: 2em;
+}
+
+h1 { font-size: 2em; margin: .67em 0 }
+h2 { font-size: 1.5em; margin: .75em 0 }
+h3 { font-size: 1.17em; margin: .83em 0 }
+h5 { font-size: .83em; margin: 1.5em 0 }
+h6 { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6 {
+  font-weight: bolder
+}
+
+p {
+  line-height: 1.4em;
+  margin-bottom: 1em;
+}
+
+a {
+  color: #2694f5;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-size: inherit;
+  outline: none;
+}
+
+button {
+  padding: 0.5em 1em;
+  background: #2694f5;
+  color: white;
+  border: 0;
+}
+
+input {
+  padding: 0.5em;
+  border: 1px solid #999;
+}
+
+/*CSS FOR CONVERTER*/
+
+.converter-body {
+  /*background: #868688;*/
+}
+
+#converter-title {
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+}
+
+.converter-container {
+  width: 600px;
+  background: #9F9FA1;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 400px;
+  padding-top: 25px;
+  border-radius: 3em;
+  box-shadow: inset 0 0 14px black;
+}
+
+.converter-input-and-buttons {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.converter-input {
+  border-radius: 10px;
+  width: 4em;
+  box-shadow: inset 0 0 5px black;
+}
+
+.converter-container button {
+  width: 12em;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px black;
+  /*text-shadow: inset 3px 3px 3px black;*/
+}
+
+.converter-container button:hover {
+  background: #3C9FF6;
+}
