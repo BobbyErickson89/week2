@@ -26,6 +26,10 @@ var dashedWord = displayWord.map(function(ch){
   return '_';
 });
 
-var finalDisplay = dashedWord.join(' ')
+var finalDisplay = dashedWord.join(' ');
+
+document.querySelector('.hidden-word-display').textContent = finalDisplay;
+
+
 
 //
