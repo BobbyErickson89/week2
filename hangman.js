@@ -12,11 +12,31 @@ var hangmanWords = [
 "come","made","may","part"
 ];
 
-var largeWords = hangmanWords.filter(function(word){
-  return word.length >= 3;
-})
 
-var randomWords = largeWords[Math.floor(Math.random() * largeWords.length)];
+// DOES THE SAME THING AS FUNCTION BELOW
+// var largeWords = hangmanWords.filter(function(word){
+//   return word.length >= 3;
+// })
+
+
+// FILTERING OUT WORDS LESS THAN 3 LETTERS
+function largeWords(words) {
+  return words.length >= 3;
+}
+
+var bigWords = hangmanWords.filter(largeWords);
+
+
+//
+// var randomWords = bigWords[Math.floor(Math.random() * bigWords.length)];
+
+
+
+var randomWords = gameWords();
+
+function gameWords() {
+  return bigWords[Math.floor(Math.random() * bigWords.length)];
+}
 
 console.log(randomWords);
 
@@ -29,6 +49,27 @@ var dashedWord = displayWord.map(function(ch){
 var finalDisplay = dashedWord.join(' ');
 
 document.querySelector('.hidden-word-display').textContent = finalDisplay;
+
+var userGuess;
+
+function guess(letterGuess) {
+  userGuess = letterGuess;
+}
+
+function checkGuess(){
+  for (var i = 0; i < randomWords.length; ++i) {
+    if (userGuess === displayWord[i]) {
+      dashedWord[i] = userGuess;
+    }
+  }
+  finalDisplay = dashedWord.join(' ');
+  document.querySelector('.hidden-word-display').textContent = finalDisplay;
+}
+
+
+
+
+
 
 
 

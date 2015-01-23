@@ -11,7 +11,11 @@
 
   <p>Guess a letter!</p>
 
-  <div class="hidden-word-display"></div>
+  <p class="hidden-word-display"></p>
+
+  <input onchange="guess(this.value)"  type="text" maxlength="1">
+  <button onclick="checkGuess()">Guess!</button>
+
 
 
   <script src="hangman.js"></script>
