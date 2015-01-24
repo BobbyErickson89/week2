@@ -20,35 +20,46 @@ var hangmanWords = [
 
 
 // FILTERING OUT WORDS LESS THAN 3 LETTERS
+// setting up filter
 function largeWords(words) {
   return words.length >= 3;
 }
 
+// calling the function for large words to filter the hangmanWords array;
 var bigWords = hangmanWords.filter(largeWords);
 
 
-//
+
+
+
+//does same thing as function below
 // var randomWords = bigWords[Math.floor(Math.random() * bigWords.length)];
 
-
-
+// PICKING A RANDOM WORD FROM THE FILTERED ARRAY
 var randomWords = gameWords();
 
 function gameWords() {
   return bigWords[Math.floor(Math.random() * bigWords.length)];
 }
 
+// SHOWING THE CHOSEN RANDOM WORD IN THE CONSOLE
 console.log(randomWords);
 
+
+// SPLITTING UP THE LETTERS FROM THE RANDOM WORD
 var displayWord = randomWords.split('');
 
+// DISPLAYING A DASH ON THE RANDOM LETTERS
 var dashedWord = displayWord.map(function(ch){
   return '_';
 });
 
+// creat string from displayWord and adds spaces in between each word.
 var finalDisplay = dashedWord.join(' ');
 
+// displaying finalDisplay in the HTML document class .hidden-word-display
 document.querySelector('.hidden-word-display').textContent = finalDisplay;
+
 
 var userGuess;
 
@@ -66,6 +77,8 @@ function checkGuess(){
   document.querySelector('.hidden-word-display').textContent = finalDisplay;
 }
 
+// // GUESS COUNT DOWN
+var clicks = 10;
 
 
 
