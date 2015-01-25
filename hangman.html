@@ -4,18 +4,20 @@
   <meta charset="utf-8">
   <title>Hangman</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/hangman.css">
 </head>
 <body>
-  <h1>Hangman</h1>
+  <header>
+    <h1>Hangman</h1>
+    <h3>A politically incorrect guessing game</h3>
+  </header>
 
-  <p>Guess a letter!</p>
 
   <p class="hidden-word-display"></p>
 
-  <p class="guesses-left-container">Guesses left: <span class="guesses-left">10</span></p>
+  <p class="guesses-left-container">Guesses left: <span class="guesses-left"></span></p>
 
-  <input onchange="guess(this.value)"  type="text" maxlength="1">
+  <input onchange="guess(this.value)" class="user-input" type="text" maxlength="1" placeholder="Guess a letter!">
   <button onclick="checkGuess()">Guess!</button>
 
 

@@ -61,24 +61,46 @@ var finalDisplay = dashedWord.join(' ');
 document.querySelector('.hidden-word-display').textContent = finalDisplay;
 
 
+var counter = document.querySelector(".guesses-left").textContent = 8;
+
 var userGuess;
+
+
+var input = document.querySelector(".user-input").textContent = "";
+
 
 function guess(letterGuess) {
   userGuess = letterGuess;
 }
 
+// FUNCTION FOR WHEN GUESS BUTTON IS CHECKED
 function checkGuess(){
   for (var i = 0; i < randomWords.length; ++i) {
     if (userGuess === displayWord[i]) {
       dashedWord[i] = userGuess;
     }
   }
+  // IF USER GUESS IS WRONG, THEY ARE DECREMENTED A GUESS
+  if(randomWords.indexOf(userGuess) === -1){
+    document.querySelector(".guesses-left").textContent = --counter;
+    if(counter <= 0){
+      alert("Wow, you're a total fucking idiot!  Play again?")
+    };
+  }
+  // RESETS INPUT TO A BLANK SPACE
+  document.querySelector('.user-input').value = "";
+  // DISPLAYS
   finalDisplay = dashedWord.join(' ');
   document.querySelector('.hidden-word-display').textContent = finalDisplay;
-}
+};
 
-// // GUESS COUNT DOWN
-var clicks = 10;
+
+
+
+
+
+
+
 
 
 

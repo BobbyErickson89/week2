@@ -1,0 +1,54 @@
+body {
+  background: #383E4B;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 1200px;
+  min-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  background: #404556;
+  text-align: center;
+  padding: 2em;
+
+}
+
+h1{
+  font-size: 3em;
+  letter-spacing: 0.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+  letter-spacing: 0.25em;
+}
+
+.hidden-word-display {
+  padding: 1.5em 1em 0.2em 1em;
+  font-size: 2.25em;
+  letter-spacing: 0.15em;
+}
+
+.guesses-left-container {
+  padding-bottom: 3em;
+}
+
+button, input {
+  font-size: inherit;
+  outline: none;
+}
+
+button {
+  background: #00B07E;
+  border: 0;
+  padding: 0.5em 1em;
+  color: #383E4B
+  /*border: 5px solid black;*/
+}
+
+input {
+  padding: 0.4em;
+}
