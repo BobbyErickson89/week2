@@ -84,7 +84,7 @@ function checkGuess(){
   if(randomWords.indexOf(userGuess) === -1){
     document.querySelector(".guesses-left").textContent = --counter;
     if(counter <= 0){
-      alert("Wow, you're a total fucking idiot!  Play again?")
+      alert("Wow....you really couldn't figure that out?  How about giving it another try")
     };
   }
   // RESETS INPUT TO A BLANK SPACE
