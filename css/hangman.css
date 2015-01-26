@@ -1,6 +1,6 @@
 body {
   background: #383E4B;
-  color: white;
+  color: #E6E6E6;
   font-family: sans-serif;
   text-align: center;
   max-width: 1200px;
@@ -45,10 +45,18 @@ button {
   background: #00B07E;
   border: 0;
   padding: 0.5em 1em;
-  color: #383E4B
-  /*border: 5px solid black;*/
+  color: #383E4B;
+  /*border: 2px solid #404556;*/
+}
+
+button:hover {
+  background: #00CC92;
+  cursor: pointer;
+  /*color: #4E576A;*/
 }
 
 input {
   padding: 0.4em;
+  width: 9em;
+  background: #E6E6E6;
 }

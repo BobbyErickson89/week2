@@ -83,8 +83,10 @@ function checkGuess(){
   // IF USER GUESS IS WRONG, THEY ARE DECREMENTED A GUESS
   if(randomWords.indexOf(userGuess) === -1){
     document.querySelector(".guesses-left").textContent = --counter;
+    // if user runs out of guesses, it runs the alert below and refreshes page
     if(counter <= 0){
-      alert("Wow....you really couldn't figure that out?  How about giving it another try")
+      alert("Wow....you really couldn't figure that out?  How about giving it another try");
+      window.location.reload();
     };
   }
   // RESETS INPUT TO A BLANK SPACE
@@ -93,6 +95,7 @@ function checkGuess(){
   finalDisplay = dashedWord.join(' ');
   document.querySelector('.hidden-word-display').textContent = finalDisplay;
 };
+
 
 
 
